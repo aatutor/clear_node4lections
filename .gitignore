@@ -12,3 +12,4 @@ pres/imgs/*
 # pres/reveal/*
 # !pres/reveal/readme.md
 
+!pres/.gitignore
