@@ -1,0 +1,3 @@
+## usage
+
+- presentations to `./pres`
