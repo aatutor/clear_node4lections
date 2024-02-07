@@ -1,1 +1,14 @@
 pres/*
+
+!pres/files/
+pres/files/*
+# !pres/files/readme.md
+
+!pres/imgs/
+pres/imgs/*
+# !pres/imgs/readme.md
+
+!pres/reveal/
+pres/reveal/*
+# !pres/reveal/readme.md
+
