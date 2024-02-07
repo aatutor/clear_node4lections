@@ -6,6 +6,9 @@ var port = 3141
 
 app.get(`/`, (request, response) => {
     fs.readdir('pres', (err, files) => {
+        if (err) {
+            return console.log('bad reading', err)
+        }
         var list = files.filter( (file) => file.endsWith('.html'));
         var body = '<body><ul>';
         list.forEach( (item) => {
@@ -15,12 +18,10 @@ app.get(`/`, (request, response) => {
     });
 })
 app.use(express.static(__dirname+'/pres'));
-app.use(express.static(__dirname+'/reveal'));
-app.use(express.static(__dirname+'/files'));
 
 app.listen(port, (err) => {
     if (err) {
         return console.log('something bad happened', err)
-    }    
+    }
     console.log(`server is listening on ${port}`)
 })
